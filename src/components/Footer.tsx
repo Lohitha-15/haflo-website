@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
     <footer className="bg-white pt-20 pb-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Logo and contact section */}
-          <div className="col-span-1">
+        <div className="flex flex-wrap md:flex-nowrap gap-8 mb-12">
+          {/* Logo and contact section (30%) */}
+          <div className="w-full md:w-1/3">
             <img 
               src="https://framerusercontent.com/images/K6lNZXnvVHeBbjJ3KrDwApLl1g.svg" 
               alt="Haflo Logo" 
@@ -35,42 +35,45 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* Navigation links */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold text-blue-900 mb-6">Navigation</h3>
-            <ul className="space-y-4">
-              {navigationLinks.map((link) => (
-                <li key={link.title}>
-                  <a href={link.href} className="text-gray-600 hover:text-blue-900">
-                    {link.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Navigation, Resources, Office Location (70%) */}
+          <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Navigation links */}
+            <div>
+              <h3 className="text-lg font-semibold text-blue-900 mb-6">Navigation</h3>
+              <ul className="space-y-4">
+                {navigationLinks.map((link) => (
+                  <li key={link.title}>
+                    <a href={link.href} className="text-gray-600 hover:text-blue-900">
+                      {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Resources links */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold text-blue-900 mb-6">Resources</h3>
-            <ul className="space-y-4">
-              {resourceLinks.map((link) => (
-                <li key={link.title}>
-                  <a href={link.href} className="text-gray-600 hover:text-blue-900">
-                    {link.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Resources links */}
+            <div>
+              <h3 className="text-lg font-semibold text-blue-900 mb-6">Resources</h3>
+              <ul className="space-y-4">
+                {resourceLinks.map((link) => (
+                  <li key={link.title}>
+                    <a href={link.href} className="text-gray-600 hover:text-blue-900">
+                      {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Office location */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold text-blue-900 mb-6">Office Location</h3>
-            <p className="text-gray-600">
-              Emily Hattson 940<br />
-              Goldendale Dr, Wasilla,<br />
-              Alaska 99654, USA
-            </p>
+            {/* Office location */}
+            <div>
+              <h3 className="text-lg font-semibold text-blue-900 mb-6">Office Location</h3>
+              <p className="text-gray-600">
+                Emily Hattson 940<br />
+                Goldendale Dr, Wasilla,<br />
+                Alaska 99654, USA
+              </p>
+            </div>
           </div>
         </div>
 
@@ -99,9 +102,9 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Copyright, Terms & Conditions, and Privacy Policy */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200">
-          <p className="text-gray-600 text-sm mb-4 md:mb-0">
+        {/* Bottom copyright, terms and privacy section */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 mb-8"> {/* Added mb-8 here */}
+          <p className="text-blue-900 text-sm mb-4 md:mb-0">
             © Copyright 2024. All Rights Reserved by FramerBite
           </p>
           <div className="flex gap-6">

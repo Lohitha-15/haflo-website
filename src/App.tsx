@@ -23,7 +23,7 @@ function App() {
       <LuxuryLivingSection /> {/* Added LuxuryLivingSection after TestimonialSection */}
       <MainSection />
       <NewsSection />
-      <PropertyHero />
+      <PropertyHero/>
       <Footer />
     </div>
   );

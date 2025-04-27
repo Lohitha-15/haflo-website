@@ -8,12 +8,12 @@ const PropertyHero: React.FC = () => {
         <img 
           src="https://framerusercontent.com/images/sfIfXIbZPGgFFDVJtJ4gzQ8.png" 
           alt="Cross Lines Overlay"
-          className="w-full h-full object-cover opacity-100" // Full opacity for better visibility
+          className="w-full h-full object-cover opacity-100"
         />
       </div>
       
-      {/* Gradient overlay on the left side with the desired color */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#000080] to-transparent z-20 w-[65%] h-[85%]"></div>
+      {/* Updated Gradient overlay: now using Tailwind blue-900 */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent z-20 w-[65%] h-[85%]"></div>
       
       <img 
         src="https://framerusercontent.com/images/wSAuoeWCYl4SaCACycTvJJg4wmg.png?scale-down-to=2048" 
